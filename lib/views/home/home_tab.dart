@@ -4,8 +4,8 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/config/app_data.dart' as appData;
 import 'package:greengrocer/config/custom_colors.dart';
-import 'package:greengrocer/view/home/widget/category_tile.dart';
-import 'package:greengrocer/view/home/widget/item_tile.dart';
+import 'package:greengrocer/views/home/widget/category_tile.dart';
+import 'package:greengrocer/views/home/widget/item_tile.dart';
 import 'package:greengrocer/widgets/app_name_widget.dart';
 import 'package:greengrocer/widgets/custom_shimmer.dart';
 

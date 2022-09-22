@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:greengrocer/config/custom_colors.dart';
 import 'package:greengrocer/models/item_model.dart';
 import 'package:greengrocer/services/utils_services.dart';
-import 'package:greengrocer/view/product/product_screen.dart';
+import 'package:greengrocer/views/product/product_screen.dart';
 
 class ItemTile extends StatefulWidget {
   final ItemModel item;

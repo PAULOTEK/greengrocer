@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/view/cart/cart_tab.dart';
-import 'package:greengrocer/view/home/home_tab.dart';
-import 'package:greengrocer/view/orders/orders_tab.dart';
-import 'package:greengrocer/view/profile/profile_tab.dart';
+import 'package:greengrocer/views/cart/cart_tab.dart';
+import 'package:greengrocer/views/home/home_tab.dart';
+import 'package:greengrocer/views/orders/orders_tab.dart';
+import 'package:greengrocer/views/profile/profile_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({Key? key}) : super(key: key);

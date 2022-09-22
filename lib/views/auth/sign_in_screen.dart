@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/config/custom_colors.dart';
-import 'package:greengrocer/view/auth/sign_up_screen.dart';
-import 'package:greengrocer/view/base/base_screen.dart';
+import 'package:greengrocer/views/auth/sign_up_screen.dart';
+import 'package:greengrocer/views/base/base_screen.dart';
 import 'package:greengrocer/widgets/app_name_widget.dart';
 import 'package:greengrocer/widgets/custom_text_field.dart';
 

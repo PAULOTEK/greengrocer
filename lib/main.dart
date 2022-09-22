@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/view/splash/splash_screen.dart';
+import 'package:greengrocer/views/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
