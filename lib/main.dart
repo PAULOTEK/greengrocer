@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/views/splash/splash_screen.dart';
+import 'package:greengrocer/modules/splash/view/splash.view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white.withAlpha(190),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const SplashView(),
     );
   }
 }

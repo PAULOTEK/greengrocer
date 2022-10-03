@@ -4,19 +4,19 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/config/app_data.dart' as appData;
 import 'package:greengrocer/config/custom_colors.dart';
-import 'package:greengrocer/views/home/widget/category_tile.dart';
-import 'package:greengrocer/views/home/widget/item_tile.dart';
+import 'package:greengrocer/modules/home/view/widget/category_tile.widget.dart';
+import 'package:greengrocer/modules/home/view/widget/item_tile.widget.dart';
 import 'package:greengrocer/widgets/app_name_widget.dart';
 import 'package:greengrocer/widgets/custom_shimmer.dart';
 
-class HomeTab extends StatefulWidget {
-  const HomeTab({Key? key}) : super(key: key);
+class HomeView extends StatefulWidget {
+  const HomeView({Key? key}) : super(key: key);
 
   @override
-  State<HomeTab> createState() => _HomeTabState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeTabState extends State<HomeTab> {
+class _HomeViewState extends State<HomeView> {
   String selectedCategory = 'Frutas';
 
   GlobalKey<CartIconKey> globalKeyCartItems = GlobalKey<CartIconKey>();
@@ -131,7 +131,7 @@ class _HomeTabState extends State<HomeTab> {
                   ? ListView.separated(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (_, index) {
-                        return CategoryTile(
+                        return CategoryTileWidget(
                           onPressed: () {
                             setState(() {
                               selectedCategory = appData.categories[index];
@@ -177,7 +177,7 @@ class _HomeTabState extends State<HomeTab> {
                       ),
                       itemCount: appData.items.length,
                       itemBuilder: (_, index) {
-                        return ItemTile(
+                        return ItemTileWidget(
                             item: appData.items[index],
                             cartAnimationMethod: itemSelectedCartAnimations);
                       },

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/views/cart/cart_tab.dart';
-import 'package:greengrocer/views/home/home_tab.dart';
-import 'package:greengrocer/views/orders/orders_tab.dart';
-import 'package:greengrocer/views/profile/profile_tab.dart';
+import 'package:greengrocer/modules/cart/cart_tab.dart';
+import 'package:greengrocer/modules/home/view/home_view.dart';
+import 'package:greengrocer/modules/orders/view/orders_tab.dart';
+import 'package:greengrocer/modules/profile/profile_tab.dart';
 
-class BaseScreen extends StatefulWidget {
-  const BaseScreen({Key? key}) : super(key: key);
+class BottomBarWidget extends StatefulWidget {
+  const BottomBarWidget({Key? key}) : super(key: key);
 
   @override
-  State<BaseScreen> createState() => _BaseScreenState();
+  State<BottomBarWidget> createState() => _BottomBarWidgetState();
 }
 
-class _BaseScreenState extends State<BaseScreen> {
+class _BottomBarWidgetState extends State<BottomBarWidget> {
   int currentIndex = 0;
   final pageController = PageController();
 
@@ -22,7 +22,7 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: const [
-          HomeTab(),
+          HomeView(),
           CartTab(),
           OrdersTab(),
           ProfileTab(),

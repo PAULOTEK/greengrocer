@@ -3,8 +3,8 @@ import 'package:greengrocer/config/custom_colors.dart';
 import 'package:greengrocer/widgets/custom_text_field.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class SignUpScreen extends StatelessWidget {
-  SignUpScreen({Key? key}) : super(key: key);
+class SignUpView extends StatelessWidget {
+  SignUpView({Key? key}) : super(key: key);
 
   final cpfFormatter = MaskTextInputFormatter(
     mask: '###.###.###-##',

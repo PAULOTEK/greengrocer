@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/config/custom_colors.dart';
 
-class CategoryTile extends StatelessWidget {
-  const CategoryTile({
+class CategoryTileWidget extends StatelessWidget {
+  const CategoryTileWidget({
     Key? key,
     required this.category,
     required this.isSelected,

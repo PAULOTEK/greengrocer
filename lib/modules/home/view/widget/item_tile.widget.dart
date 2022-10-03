@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/config/custom_colors.dart';
 import 'package:greengrocer/models/item_model.dart';
+import 'package:greengrocer/modules/product/product_screen.dart';
 import 'package:greengrocer/services/utils_services.dart';
-import 'package:greengrocer/views/product/product_screen.dart';
 
-class ItemTile extends StatefulWidget {
+class ItemTileWidget extends StatefulWidget {
   final ItemModel item;
   final void Function(GlobalKey) cartAnimationMethod;
 
-  const ItemTile({
+  const ItemTileWidget({
     Key? key,
     required this.item,
     required this.cartAnimationMethod,
   }) : super(key: key);
 
   @override
-  State<ItemTile> createState() => _ItemTileState();
+  State<ItemTileWidget> createState() => _ItemTileWidgetState();
 }
 
-class _ItemTileState extends State<ItemTile> {
+class _ItemTileWidgetState extends State<ItemTileWidget> {
   final GlobalKey imageGk = GlobalKey();
 
   final UtilsServices utilsServices = UtilsServices();
