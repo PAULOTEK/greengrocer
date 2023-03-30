@@ -1,8 +1,7 @@
 import 'package:add_to_cart_animation/add_to_cart_animation.dart';
-import 'package:add_to_cart_animation/add_to_cart_icon.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badge;
 import 'package:flutter/material.dart';
-import 'package:greengrocer/config/app_data.dart' as appData;
+import 'package:greengrocer/config/app_data.dart' as app;
 import 'package:greengrocer/config/custom_colors.dart';
 import 'package:greengrocer/modules/home/view/widget/category_tile.widget.dart';
 import 'package:greengrocer/modules/home/view/widget/item_tile.widget.dart';
@@ -60,8 +59,10 @@ class _HomeViewState extends State<HomeView> {
             ),
             child: GestureDetector(
               onTap: () {},
-              child: Badge(
-                badgeColor: CustomColors.customContrastColor,
+              child: badge.Badge(
+                badgeStyle: badge.BadgeStyle(
+                  badgeColor: CustomColors.customContrastColor,
+                ),
                 badgeContent: const Text(
                   '2',
                   style: TextStyle(
@@ -83,10 +84,11 @@ class _HomeViewState extends State<HomeView> {
       ),
 
       body: AddToCartAnimation(
-        gkCart: globalKeyCartItems,
-        previewDuration: const Duration(milliseconds: 100),
-        previewCurve: Curves.ease,
-        receiveCreateAddToCardAnimationMethod: (addToCardAnimationMethod) {
+        // previewDuration: const Duration(milliseconds: 100),
+        // previewCurve: Curves.ease,
+
+        cartKey: globalKeyCartItems,
+        createAddToCartAnimation: (addToCardAnimationMethod) {
           runAddToCardAnimation = addToCardAnimationMethod;
         },
         child: Column(
@@ -134,16 +136,15 @@ class _HomeViewState extends State<HomeView> {
                         return CategoryTileWidget(
                           onPressed: () {
                             setState(() {
-                              selectedCategory = appData.categories[index];
+                              selectedCategory = app.categories[index];
                             });
                           },
-                          category: appData.categories[index],
-                          isSelected:
-                              appData.categories[index] == selectedCategory,
+                          category: app.categories[index],
+                          isSelected: app.categories[index] == selectedCategory,
                         );
                       },
                       separatorBuilder: (_, index) => const SizedBox(width: 10),
-                      itemCount: appData.categories.length,
+                      itemCount: app.categories.length,
                     )
                   : ListView(
                       scrollDirection: Axis.horizontal,
@@ -175,10 +176,10 @@ class _HomeViewState extends State<HomeView> {
                         crossAxisSpacing: 10,
                         childAspectRatio: 9 / 11.5,
                       ),
-                      itemCount: appData.items.length,
+                      itemCount: app.items.length,
                       itemBuilder: (_, index) {
                         return ItemTileWidget(
-                            item: appData.items[index],
+                            item: app.items[index],
                             cartAnimationMethod: itemSelectedCartAnimations);
                       },
                     )
