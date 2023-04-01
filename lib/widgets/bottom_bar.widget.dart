@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/modules/cart/cart_tab.dart';
+import 'package:greengrocer/modules/cart/view/cart_tab.view.dart';
 import 'package:greengrocer/modules/home/view/home_view.dart';
-import 'package:greengrocer/modules/orders/view/orders_tab.dart';
-import 'package:greengrocer/modules/profile/profile_tab.dart';
+import 'package:greengrocer/modules/orders/view/orders_tab.view.dart';
+import 'package:greengrocer/modules/profile/view/profile_tab.view.dart';
 
 class BottomBarWidget extends StatefulWidget {
   const BottomBarWidget({Key? key}) : super(key: key);
@@ -23,8 +23,8 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
         controller: pageController,
         children: const [
           HomeView(),
-          CartTab(),
-          OrdersTab(),
+          CartTabView(),
+          OrdersTabView(),
           ProfileTab(),
         ],
       ),

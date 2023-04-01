@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:greengrocer/config/app_data.dart' as appData;
 import 'package:greengrocer/modules/orders/view/widget/order_tile.dart';
 
-class OrdersTab extends StatelessWidget {
-  const OrdersTab({Key? key}) : super(key: key);
+class OrdersTabView extends StatelessWidget {
+  const OrdersTabView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -5,16 +5,16 @@ import 'package:greengrocer/models/cart_item_model.dart';
 import 'package:greengrocer/services/utils_services.dart';
 import 'package:greengrocer/widgets/payment_dialog.dart';
 
-import 'widget/cart_tile.dart';
+import '../widget/cart_tile.dart';
 
-class CartTab extends StatefulWidget {
-  const CartTab({Key? key}) : super(key: key);
+class CartTabView extends StatefulWidget {
+  const CartTabView({Key? key}) : super(key: key);
 
   @override
-  State<CartTab> createState() => _CartTabState();
+  State<CartTabView> createState() => _CartTabViewState();
 }
 
-class _CartTabState extends State<CartTab> {
+class _CartTabViewState extends State<CartTabView> {
   final UtilsServices utilsServices = UtilsServices();
 
   void removeItemFromCart(CartItemModel cartITem) {
